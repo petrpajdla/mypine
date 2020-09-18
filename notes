@@ -1,0 +1,23 @@
+# Notes on my Pinebook pro
+
+## Setting up Czech keyboard layout
+
+Change a file in `/etc/X11/xorg.conf.d/`, it is named `00-keyboard.conf` and 
+line `Option "XkbLayout" "cz"` must be changed...
+
+
+## 
+
+
+## Changing settings of i3 window manager
+
+Guide: <https://i3wm.org/docs/userguide.html#configuring>
+
+* Original file in `/etc/i3/config`
+* Edit file in `~/.i3/config`
+
+* Change main `mod` key to `super` 
+
+
+
+
