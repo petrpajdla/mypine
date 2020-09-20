@@ -1,5 +1,45 @@
 # Notes on my Pinebook pro
 
+I sort of liked the default KDE Plasma, but there were just too many bells and whistles and since I was using BunsenLabs Helium for several last years,
+I found these many clicking options overwhelming.
+On the other and, I was thinking about switching to Manjaro for a long time, since several friends recommended it (thanks goes to nevrome and dakni).
+But in the end I decided to go with the i3 window manager. One reason is that it is developed by official (?) Manjaro ARM team.
+The other I sort of liked the idea of most of the control done using keyboard shortcuts and i3 was somwhere recommended for newbies 
+starting with tiling window managers.
+
+FYI I recommned an introduction on window managers with live demos by ?? <youtube link>.
+
+## Booting from SD card
+
+So in the forums <link> I stumbled upon some threads that mentioned that not all the 
+SD cards work, someone recommended San Disk Ultra 16 GB Micro SDHC (Class I), I bought this one and it worked just fine.
+Before that, I tried Kingston Micro SDHC 16 GB (Class I). This one failed to boot.
+Regarding the San Disk SD card - the vendor labeled it "Ultra Android", no worries with that, imho just a trick to make bfus think some SD cards are *better* for the phones with Android..
+
+## Installing from SD card
+
+All te guides say in bold type to chooose the correct version of the install file.
+There are usually two versions of the install file, one is labeled as the correct one for flashing to the eMMC.
+Of course I (unaware of that) chose the other one.
+It booted nicely and did the install. Only problem being that it installed on the SD card.
+So check twice which version are you flashing to the SD card.
+
+## Flashing the SD card
+
+I used balena software recommended by Manjaro team <github repo link>. It can be used to flash any image to the SD card, some can be downloaded through it, 
+very simpel to use, runs under Windows, Linux, anything I suppose (did not manage to run it on the Pinebook Pro under Manjaro  KDE Plasma though, but also I did not spend too much time trying).
+
+The install process is then quite straightforward, shove the SD card in the reader (this might be the most difficult step along with removing it).
+Boot from it, follow the instructions on the screen.
+The install took only several minutes in my case, then the system reboots and you are supposed to remove the SD from the slot.
+
+
+## Problems
+
+* PBP does not go to sleep, or, the sleep is interrupted by the lid being closed. Then the battery is drained.
+
+
+
 ## Setting up Czech keyboard layout
 
 Change a file in `/etc/X11/xorg.conf.d/`, it is named `00-keyboard.conf` and 
@@ -19,5 +59,9 @@ Guide: <https://i3wm.org/docs/userguide.html#configuring>
 * Change main `mod` key to `super` 
 
 
+## Repair boot/sleep
 
+It won't go to sleep. CLosing the lid interrupts the sleep and completely drains the battery.
+There might be a fix in mrfixit2001 updates...
 
+https://github.com/mrfixit2001/updates_repo/tree/v2.0/pinebook/filesystem
